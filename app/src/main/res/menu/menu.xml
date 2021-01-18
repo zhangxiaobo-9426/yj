@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/AccompanyFragment"
+        android:icon="@drawable/icon_pb"
+        android:title="@string/accompany" />
+    <item
+        android:id="@+id/TrainingFragment"
+        android:icon="@drawable/icon_edu"
+        android:title="@string/training" />
+    <item
+        android:id="@+id/MyFragment"
+        android:icon="@drawable/icon_my"
+        android:title="@string/my" />
+</menu>
