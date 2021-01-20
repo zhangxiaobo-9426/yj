@@ -1,12 +1,9 @@
-package com.example.yj.ui;
+package com.example.yj;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.example.yj.MainActivity;
-import com.example.yj.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
