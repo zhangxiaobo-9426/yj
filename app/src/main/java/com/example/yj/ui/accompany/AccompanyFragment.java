@@ -31,9 +31,9 @@ import java.util.ArrayList;
  */
 public class AccompanyFragment extends Fragment implements OnBannerListener {
     //轮播图
-    private Banner banner;
-    private ArrayList<String> list_path;
-    private ArrayList<String> list_title;
+    private Banner accompany_banner;
+    private ArrayList<String> accompany_banner_list_path;
+    private ArrayList<String> accompany_banner_list_title;
 
     public AccompanyFragment() {
         // Required empty public constructor
@@ -54,36 +54,36 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
     }
 
     private void initBanner( View view) {
-        banner = view.findViewById(R.id.accompany_banner);
+        accompany_banner = view.findViewById(R.id.accompany_banner);
         //放图片地址的集合
-        list_path = new ArrayList<>();
+        accompany_banner_list_path = new ArrayList<>();
         //放标题的集合
-        list_title = new ArrayList<>();
+        accompany_banner_list_title = new ArrayList<>();
 
-        list_path.add("https://s3.ax1x.com/2021/01/20/sWyNvQ.jpg");
-        list_path.add("https://s3.ax1x.com/2021/01/20/sWytgg.jpg");
-        list_path.add("https://s3.ax1x.com/2021/01/20/sWyJC8.jpg");
-        list_path.add("https://s3.ax1x.com/2021/01/20/sWyY8S.jpg");
-        list_title.add("突破少年");
-        list_title.add("森林戏剧夏令营");
-        list_title.add("上海迪士尼");
-        list_title.add("喀斯特学院");
+        accompany_banner_list_path.add("https://s3.ax1x.com/2021/01/20/sWyNvQ.jpg");
+        accompany_banner_list_path.add("https://s3.ax1x.com/2021/01/20/sWytgg.jpg");
+        accompany_banner_list_path.add("https://s3.ax1x.com/2021/01/20/sWyJC8.jpg");
+        accompany_banner_list_path.add("https://s3.ax1x.com/2021/01/20/sWyY8S.jpg");
+        accompany_banner_list_title.add("突破少年");
+        accompany_banner_list_title.add("森林戏剧夏令营");
+        accompany_banner_list_title.add("上海迪士尼");
+        accompany_banner_list_title.add("喀斯特学院");
         //设置内置样式，共有六种可以点入方法内逐一体验使用。
-        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
-        banner.setImageLoader(new AccompanyFragment.MyLoader());
+        accompany_banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
+        accompany_banner.setImageLoader(new AccompanyFragment.MyLoader());
         //设置图片网址或地址的集合
         //设置图片网址或地址的集合
-        banner.setImages(list_path);
+        accompany_banner.setImages(accompany_banner_list_path);
         //设置轮播的动画效果，内含多种特效，可点入方法内查找后内逐一体验
-        banner.setBannerAnimation(Transformer.Default);
+        accompany_banner.setBannerAnimation(Transformer.Default);
         //设置轮播图的标题集合
-        banner.setBannerTitles(list_title);
+        accompany_banner.setBannerTitles(accompany_banner_list_title);
         //设置轮播间隔时间
-        banner.setDelayTime(3000);
+        accompany_banner.setDelayTime(3000);
         //设置是否为自动轮播，默认是“是”。
-        banner.isAutoPlay(true);
+        accompany_banner.isAutoPlay(true);
         //设置指示器的位置，小点点，左中右。
-        banner.setIndicatorGravity(BannerConfig.CENTER)
+        accompany_banner.setIndicatorGravity(BannerConfig.CENTER)
                 //以上内容都可写成链式布局，这是轮播图的监听。比较重要。方法在下面。
                 .setOnBannerListener(this)
                 //必须最后调用的方法，启动轮播图。
