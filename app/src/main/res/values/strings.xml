@@ -8,11 +8,13 @@
     <string name="training">培训班</string>
     <string name="my">我的</string>
 
-<!--    accompany-->
+    <!--    accompany-->
     <string name="accompany_banner">陪伴轮播图</string>
-    <string name="accompany_logo_px_name" >培训班</string>
-    <string name="accompany_logo_tfcs_name" >天赋测试</string>
+    <string name="accompany_logo_px_name">培训班</string>
+    <string name="accompany_logo_tfcs_name">天赋测试</string>
     <string name="accompany_logo_nlts_name">能力提升</string>
     <string name="accompany__original_price_yuanjia">原价</string>
     <string name="accompany_weinintuijian">为您推荐</string>
+    <string name="accompany_main_price_description">价格说明</string>
+    <string name="accompany_main_product_features">产品特色</string>
 </resources>

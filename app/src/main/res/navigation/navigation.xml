@@ -9,7 +9,11 @@
         android:id="@+id/AccompanyFragment"
         android:name="com.example.yj.ui.accompany.AccompanyFragment"
         android:label="fragment_accompany"
-        tools:layout="@layout/fragment_accompany" />
+        tools:layout="@layout/fragment_accompany" >
+        <action
+            android:id="@+id/action_AccompanyFragment_to_accompanyMainFragment"
+            app:destination="@id/accompanyMainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/TrainingFragment"
         android:name="com.example.yj.ui.training.TrainingFragment"
@@ -20,4 +24,9 @@
         android:name="com.example.yj.ui.my.MyFragment"
         android:label="fragment_my"
         tools:layout="@layout/fragment_my" />
+    <fragment
+        android:id="@+id/accompanyMainFragment"
+        android:name="com.example.yj.ui.accompany.accompany_main.AccompanyMainFragment"
+        android:label="fragment_accompany_main"
+        tools:layout="@layout/fragment_accompany_main" />
 </navigation>

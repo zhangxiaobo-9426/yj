@@ -4,4 +4,5 @@
     <dimen name="accompany_tag_size">10sp</dimen>
     <dimen name="accompany_divider_layout_height">10sp</dimen>
     <dimen name="accompany_price_size">16sp</dimen>
+    <dimen name="accompany_main_title_size">18sp</dimen>
 </resources>
