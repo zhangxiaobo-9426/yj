@@ -7,6 +7,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +19,9 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.yj.R;
+import com.example.yj.ui.accompany.entity.Accompany;
+import com.example.yj.ui.network.ApiDemo;
+import com.example.yj.ui.network.RetrofitFactory;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -24,6 +30,11 @@ import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 
 /**
@@ -34,6 +45,10 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
     private Banner accompany_banner;
     private ArrayList<String> accompany_banner_list_path;
     private ArrayList<String> accompany_banner_list_title;
+
+    //list
+    private RecyclerView recyclerView;
+    private AccompanyAdapter adapter;
 
     public AccompanyFragment() {
         // Required empty public constructor
@@ -51,6 +66,48 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initBanner(view);
+        initList(view);
+    }
+
+    private void initList(View view) {
+        recyclerView = view.findViewById(R.id.accompany_recyclerView);
+        // 第一步：指定布局管理器
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(manager);
+        // 第二步：设置适配器
+        adapter = new AccompanyAdapter(R.layout.accompany_item);
+        recyclerView.setAdapter(adapter);
+        //recyclerView分割线
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
+
+        loadDatahttp();
+    }
+
+    private void loadDatahttp() {
+        // 获取Retrofit对象
+        RetrofitFactory.getRetrofit().create(ApiDemo.class)
+                .getAccompany()
+                // 切换到IO现场执行网络请求
+                .subscribeOn(Schedulers.io())
+                // 切换到UI线程执行UI操作
+                .observeOn(AndroidSchedulers.mainThread())
+                // 获取网络请求结果
+                .subscribe(new Consumer<List<Accompany>>()
+                           {
+                               @Override
+                               public void accept(List<Accompany> repos) throws Exception
+                               {
+
+                                   adapter.addData(repos);
+                               }
+                           },
+                        new Consumer<Throwable>() {
+                            @Override
+                            public void accept(Throwable throwable) throws Exception
+                            {
+                                throwable.printStackTrace();
+                            }
+                        });
     }
 
     private void initBanner( View view) {
