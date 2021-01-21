@@ -65,7 +65,6 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initBanner(view);
         initList(view);
     }
 
@@ -76,6 +75,14 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
         recyclerView.setLayoutManager(manager);
         // 第二步：设置适配器
         adapter = new AccompanyAdapter(R.layout.accompany_item);
+
+        //设置头部
+        View headView = getLayoutInflater().inflate(R.layout.accompany_head, null);
+        //轮播图
+        initBanner(headView);
+        adapter.addHeaderView(headView);
+
+
         recyclerView.setAdapter(adapter);
         //recyclerView分割线
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));

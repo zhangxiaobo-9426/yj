@@ -1,5 +1,7 @@
 package com.example.yj.ui.accompany;
 
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
