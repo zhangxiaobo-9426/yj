@@ -15,4 +15,6 @@
     <color name="weatherInfo">#BD444444</color>
     <color name="white">#FFFFFF</color>
     <color name="green">#29AC5F</color>
+    <color name="colorBlues">#87CEFA</color>
+    <color name="colorBlur2">#4682B4</color>
 </resources>

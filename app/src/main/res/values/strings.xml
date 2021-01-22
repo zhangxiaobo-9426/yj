@@ -28,4 +28,13 @@
     <string name="yuanqi">元</string>
     <string name="leijichushuo">累计出售</string>
     <string name="riqi">日期</string>
+
+
+    <string name="sign_in">立即登录</string>
+    <string name="username">账 号:</string>
+    <string name="password">密 码:</string>
+    <string name="login_user_hint">请输入手机号/用户名</string>
+    <string name="input_password">请输入登录密码</string>
+    <string name="welcome_sign_in">登录</string>
+    <string name="welcome_sign_new">注册</string>
 </resources>
