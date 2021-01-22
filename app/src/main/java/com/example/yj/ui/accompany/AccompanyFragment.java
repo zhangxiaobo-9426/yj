@@ -118,7 +118,7 @@ public class AccompanyFragment extends Fragment implements OnBannerListener {
     }
 
     private void initBanner( View view) {
-        accompany_banner = view.findViewById(R.id.accompany_banner);
+        accompany_banner = view.findViewById(R.id.training_banner);
         //放图片地址的集合
         accompany_banner_list_path = new ArrayList<>();
         //放标题的集合

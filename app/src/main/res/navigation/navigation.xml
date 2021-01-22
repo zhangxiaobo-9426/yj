@@ -18,7 +18,11 @@
         android:id="@+id/TrainingFragment"
         android:name="com.example.yj.ui.training.TrainingFragment"
         android:label="fragment_training"
-        tools:layout="@layout/fragment_training" />
+        tools:layout="@layout/fragment_training" >
+        <action
+            android:id="@+id/action_TrainingFragment_to_trainingMainFragment"
+            app:destination="@id/trainingMainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/MyFragment"
         android:name="com.example.yj.ui.my.MyFragment"
@@ -29,4 +33,9 @@
         android:name="com.example.yj.ui.accompany.accompany_main.AccompanyMainFragment"
         android:label="fragment_accompany_main"
         tools:layout="@layout/fragment_accompany_main" />
+    <fragment
+        android:id="@+id/trainingMainFragment"
+        android:name="com.example.yj.ui.training.training_main.TrainingMainFragment"
+        android:label="fragment_training_main"
+        tools:layout="@layout/fragment_training_main" />
 </navigation>

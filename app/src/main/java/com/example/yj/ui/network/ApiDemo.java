@@ -1,6 +1,7 @@
 package com.example.yj.ui.network;
 
 import com.example.yj.ui.accompany.entity.Accompany;
+import com.example.yj.ui.training.entity.Training;
 
 import java.util.List;
 
@@ -36,4 +37,7 @@ public interface ApiDemo
 
     @GET("accompany/listAccompany")
     Flowable<List<Accompany>> getAccompany();
+
+    @GET("training/listTraining")
+    Flowable<List<Training>> getTraining();
 }

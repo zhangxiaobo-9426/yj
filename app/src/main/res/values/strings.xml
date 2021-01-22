@@ -17,4 +17,8 @@
     <string name="accompany_weinintuijian">为您推荐</string>
     <string name="accompany_main_price_description">价格说明</string>
     <string name="accompany_main_product_features">产品特色</string>
+    <string name="training_ys">已售</string>
+    <string name="training_main_set_meal_tc">套餐</string>
+    <string name="training_main_price_description_xz">购买须知</string>
+    <string name="training_main_product_features_cpts">产品特色</string>
 </resources>
