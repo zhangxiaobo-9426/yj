@@ -19,13 +19,13 @@
                     android:id="@+id/peixunban"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/logo_j" />
+                    android:src="@drawable/logo_qi" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/accompany_logo_px_name" />
+                    android:text="@string/training_qimengjiaoyu" />
 
             </LinearLayout>
             <LinearLayout
@@ -35,13 +35,13 @@
                     android:id="@+id/tianfuceshi"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/logo_g" />
+                    android:src="@drawable/logo_xiao" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/accompany_logo_tfcs_name" />
+                    android:text="@string/training_xiaoxueba" />
 
             </LinearLayout>
             <LinearLayout
@@ -51,24 +51,24 @@
                     android:id="@+id/nenglitisheng"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/logo_k" />
+                    android:src="@drawable/logo_d" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/accompany_logo_nlts_name" />
+                    android:text="@string/training_siweiqimeng" />
 
             </LinearLayout>
             <TextView/>
         </TableRow>
     </TableLayout>
-
-    <ImageView
-        android:id="@+id/main_iv_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/dp_4"
-        android:src="@drawable/weinintuijian" />
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="培训班 新课上线"
+    android:paddingStart="16dp"
+    android:layout_margin="4dp"
+    android:paddingBottom="8dp"
+    android:textSize="18sp"/>
 </LinearLayout>

@@ -21,4 +21,11 @@
     <string name="training_main_set_meal_tc">套餐</string>
     <string name="training_main_price_description_xz">购买须知</string>
     <string name="training_main_product_features_cpts">产品特色</string>
+
+    <string name="training_qimengjiaoyu">阅读</string>
+    <string name="training_xiaoxueba">小学霸</string>
+    <string name="training_siweiqimeng">思维启蒙</string>
+    <string name="yuanqi">元</string>
+    <string name="leijichushuo">累计出售</string>
+    <string name="riqi">日期</string>
 </resources>
