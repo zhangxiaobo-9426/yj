@@ -27,7 +27,11 @@
         android:id="@+id/MyFragment"
         android:name="com.example.yj.ui.my.MyFragment"
         android:label="fragment_my"
-        tools:layout="@layout/fragment_my" />
+        tools:layout="@layout/fragment_my" >
+        <action
+            android:id="@+id/action_MyFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accompanyMainFragment"
         android:name="com.example.yj.ui.accompany.accompany_main.AccompanyMainFragment"
@@ -38,4 +42,13 @@
         android:name="com.example.yj.ui.training.training_main.TrainingMainFragment"
         android:label="fragment_training_main"
         tools:layout="@layout/fragment_training_main" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.yj.ui.my.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_MyFragment"
+            app:destination="@id/MyFragment" />
+    </fragment>
 </navigation>
